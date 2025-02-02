@@ -157,7 +157,9 @@ section {
 /* HOME / HERO */
 /* Add background image to Home section */
 #home {
-  background: url('Images/Banner.jpg') center/cover no-repeat;
+  background: url('Images/Banner.jpg') no-repeat;
+  background-size: 120%;
+  background-position: center 80px;
   color: var(--white);
   display: flex;
   justify-content: center;
@@ -166,6 +168,32 @@ section {
   height: 100vh;
   padding: 2rem;
 }
+
+
+/* Adjust background position for tablets */
+@media (max-width: 992px) {
+  #home {
+    background-position: 55% 60px; /* Moves image slightly to the right */
+    background-size: 115%;
+  }
+}
+
+/* Adjust background position for mobile devices */
+@media (max-width: 768px) {
+  #home {
+    background-position: 60% 50px; /* Moves further to the right */
+    background-size: 110%;
+  }
+}
+
+/* Adjust for smaller phones */
+@media (max-width: 480px) {
+  #home {
+    background-position: 25% 40px; /* Moves even further to the right */
+    background-size: cover;
+  }
+}
+
 
 /* Add overlay for better text readability */
 #home::before {
