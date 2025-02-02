@@ -157,24 +157,27 @@ section {
 /* HOME / HERO */
 /* Add background image to Home section */
 #home {
-  background: url('Images/Banner.jpg') no-repeat;
-  background-size: 120%;
-  background-position: center 80px;
+  background: url('Images/Banner.jpg') no-repeat center top;
+  background-size: cover;
+  background-position: 50% 50px;
   color: var(--white);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   height: 100vh;
   padding: 2rem;
+  position: relative;
 }
 
-
-/* Adjust background position for tablets */
-@media (max-width: 992px) {
+/* Fix background positioning for smaller screens */
+@media (max-width: 768px) {
   #home {
-    background-position: 55% 60px; /* Moves image slightly to the right */
-    background-size: 115%;
+    background-position: center center; /* Center image fully */
+    background-size: contain; /* Show the full image */
+    height: auto; /* Adjust height dynamically */
+    padding: 4rem 1rem;
   }
 }
 
