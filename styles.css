@@ -73,8 +73,17 @@ h1, h2, h3, h4 {
 
 /* Logo */
 .logo {
+  display: flex;
+  align-items: center;
   font-size: 1.4rem;
   font-weight: bold;
+  color: var(--white);
+}
+
+.logo-img {
+  width: 50px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Space between logo and text */
 }
 
 /* Hamburger Icon (mobile) */
